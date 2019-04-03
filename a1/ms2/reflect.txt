@@ -1,0 +1,28 @@
+/*
+ ============================================================================
+ Name       : reflect.txt
+ Author     : James Giroux - jgiroux1@myseneca.ca
+ Student #  : 129198164
+ Section	 	: SJJ
+ Date       : February 21, 2019 - Assignment 1 - Milestone 2
+ ============================================================================
+*/
+
+/*
+ ============================================================================
+ Description : Reflection of Assignment 1 - Milestone 2
+ ============================================================================
+*/
+
+So, I did not enjoy teaching myself strings in C.  I had to read the string notes several times until I found what I needed to complete milestone 2, as well as reading several pages on StackOverflow.com.  The formatting options of scanf() gave me some real frustrations because of the buffer issues associated with strings and string input.  I had to play with the syntax and input options for a long time before I found the combination I needed to accept strings from the user and not skip scanf() statements due to information still in the buffer.  That said, once I got my head around the information it was not that hard to understand, and maybe I could have spent less time figuring it out if I had read the notes more clearly the first time, it was a very small section of the notes that covered scanf(" %length[^\n]", varName).  I had to figure out the space at the beginning from internet resources, this is there in order to clear the whitespace from the buffer.
+
+I think that a more efficient way to accept input from the user would be to use function(s). The function would need to receive at least two parameters, one of them being a pointer to the structure that we want to modify, and the other would be a string for the last part of the input prompt i.e. "enter... first name, last name, street, etc.".  We could also implement another function to check if the user wants to enter the optional information with the same type of parameters being passed to that function, as well as others for validating data, and displaying contact information.  I am guessing that by the end of this project we will be implementing these efficiencies into the program.  I look forward to the challenge! 
+
+*** UPDATE *** - I have already taken the time to implement several functions into the program. Function prototypes in contacts.h and functions in contacts.c
+
+
+There are several differences between a string and a primitive character array, including but probably not limited to; How they are declared and initialized, how we can modify and manipulate them within the program, and the different specifier that is needed within our printf() and scanf() statements.  %c is needed when displaying elements of a primitive char array while %s is needed to display strings. I noticed that my character array will still print within the printf() function if I use the %s specifier (i.e. printf("%s", primCharArray)) it will still print the full array of characters but it will also print the %s.  I think that this is caused due to the way that these formatting functions are interpreting the specifier and its relation to the variable provided. In my opinon strings seem like they are the better choice except in cases where you would need a constant set of characters for some related problem.
+
+In the end I am glad that we have covered strings and chars in C, because it is important to be able to write programs that are not just number based and now, we can start on more complex applications using all the logic tools, modular design principals, and types of variables that we have learned so far.
+
+I am going to have to update my functions for MS4 because of the functions that the assignment wants to use.  I think my way is valid but I will change the functions for MS4.  As with any programming solution there are several ways of getting the job done.

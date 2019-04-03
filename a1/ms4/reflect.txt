@@ -1,0 +1,25 @@
+/*
+ ============================================================================
+ Name        : reflect.txt
+ Author      : James Giroux - jgiroux1@myseneca.ca
+ Student #   : 129198164
+ Section     : SJJ
+ Date        : February 19, 2019 - Assignment 1
+ ============================================================================
+*/
+
+/*
+ ============================================================================
+ Description : Structure declarations and function prototypes header file
+ ============================================================================
+*/
+
+I implemented functions into milestone 2.  I had them set up differently than the MS4 instructions asked for.  I had one function for numerical input and one function for text input.  I think both ways are valid implementation of functions, although creating a function for each section of input (i.e. Name, Address, Phone numbers) works nicely as well.  Especially when combining all three structures into one called contact. I feel very confident with functions and pointers in C programming.  Implementing a struct for contact is a good idea because it cleans up the code and makes all values accessible through one variable name.  Therefore, we can just send the address of the contact struct into the functions that we have created.
+
+We do not want to sent the address of the whole contact struct to the individual functions.  First of all there is no need to send any extra information into the function if it is not going to use those variables.  It could also have some security issues.  So the proper paramater to give to the function would be (for ex. getNameInfo(&contact.name) getAddressInfo(&contact.address), and getPhoneNumbers(&contact.phone).  This way we are only sending the essential informaition the function needs to modify.
+
+I decided to keep my functions for clearBuffer(), optionalData(), and displayContact() and valPos() because they are still useful and re-useable within the other functions and the main function for displayContact.
+
+I also added features for validating that and numerical input is a positive value.  And only allowed the user to enter y or n || Y or N for the optional values.  I also wrote a function to display the contact data, this function also does not display any optional data that was not entered.
+
+I am enjoying this assignment and am looking forward to the second half of the assignment being released.  Also, any fun C challenges you think I would be able to do, please send them my way. I have a feeling that the second part of this assignment is going to get fun... I think som people are starting to realize that Computer Programming is not for them.
